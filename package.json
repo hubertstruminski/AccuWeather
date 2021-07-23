@@ -7,11 +7,17 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "postinstall": "patch-package"
   },
   "dependencies": {
+    "patch-package": "^6.4.7",
     "react": "17.0.1",
-    "react-native": "0.64.2"
+    "react-native": "0.64.2",
+    "react-native-gesture-handler": "^1.10.3",
+    "react-native-keyboard-spacer": "^0.4.1",
+    "react-native-reanimated": "^2.2.0",
+    "react-navigation": "^3.13.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
