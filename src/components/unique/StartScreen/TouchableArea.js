@@ -1,9 +1,12 @@
 import React, { useCallback } from 'react';
-import { TouchableWithoutFeedback, View, Keyboard } from 'react-native';
+import { 
+    TouchableWithoutFeedback, 
+    View, 
+    Keyboard 
+} from 'react-native';
 import styles from './touchableAreaStyle';
 
 const TouchableArea = ({ children }) => {
-
     const onPress = useCallback(() => {
         Keyboard.dismiss();
     }, []);

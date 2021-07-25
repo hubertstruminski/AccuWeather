@@ -1,5 +1,8 @@
 import axios from 'axios';
-import { API_KEY, ENDPOINT_URL } from "../../constants/contstants";
+import { 
+  API_KEY, 
+  ENDPOINT_URL 
+} from "../../constants/contstants";
 
 export const FETCH_LOCATION_KEY = 'FETCH_LOCATION_KEY';
 export const FETCH_FORECAST_12_HOURS = 'FETCH_FORECAST_12_HOURS';
@@ -27,10 +30,8 @@ export const fetchLocationKey = (city) => {
 };
 
 export const fetchForecast12Hours = (locationKey) => {
-  console.log("before dispatch");
   return async (dispatch) => {
     try {
-      console.log("before axios");
       const response = await axios({
         method: 'GET',
         url: `${ENDPOINT_URL}/forecasts/v1/hourly/12hour/${locationKey}?apikey=${API_KEY}`,
@@ -39,8 +40,6 @@ export const fetchForecast12Hours = (locationKey) => {
         },
         data: undefined
       });
-
-      console.log(response);
 
       dispatch({
         type: FETCH_FORECAST_12_HOURS,

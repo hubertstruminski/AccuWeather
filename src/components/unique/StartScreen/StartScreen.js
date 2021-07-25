@@ -1,7 +1,17 @@
-import React, { useCallback, useState } from 'react';
-import { Platform, SafeAreaView, StatusBar } from 'react-native';
+import React, { 
+  useCallback, 
+  useState 
+} from 'react';
+import { 
+  Platform, 
+  SafeAreaView, 
+  StatusBar 
+} from 'react-native';
 import styles from './startScreenStyle';
-import { globalStyles } from '../../common/globalStyle';
+import { 
+  globalStyles, 
+  heightScale 
+} from '../../common/globalStyle';
 import { ACCUWEATHER_APP_LABEL } from '../../../constants/labels';
 import Button from '../../common/button/Button';
 import Input from '../../common/input/Input';
@@ -38,7 +48,7 @@ const StartScreen = ({
         <Button 
           onPress={onPress}
         />
-        <KeyboardSpacer topSpacing={Platform.OS === 'android' ? 30 : 0} />
+        <KeyboardSpacer topSpacing={Platform.OS === 'android' ? 20 * heightScale : 0} />
       </TouchableArea> 
     </SafeAreaView>
   );

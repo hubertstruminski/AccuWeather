@@ -31,6 +31,7 @@ const MainNavigation = createStackNavigator({
   },
 }, {
   initialRouteName: 'StartScreen',
+  headerLayoutPreset: 'center'
 });
 
 export default createAppContainer(MainNavigation);

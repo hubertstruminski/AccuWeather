@@ -1,4 +1,7 @@
-import { FETCH_FORECAST_12_HOURS, FETCH_LOCATION_KEY } from "../actions/weatherActions";
+import { 
+    FETCH_FORECAST_12_HOURS, 
+    FETCH_LOCATION_KEY 
+} from "../actions/weatherActions";
 
 const initialState = {
     locationKey: '',
@@ -11,8 +14,6 @@ const weatherReducer = (state = initialState, action) => {
             state.locationKey = action.payload;
             return state;
         case FETCH_FORECAST_12_HOURS:
-            console.log(action.payload);
-            console.log("RETRIEVED");
             state.weatherForecasts = action.payload;
             return state;
         default:

@@ -1,6 +1,10 @@
 import React from 'react';
 import Navigator from './navigation/Navigator';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { 
+  createStore, 
+  combineReducers, 
+  applyMiddleware,
+} from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import weatherReducer from './src/store/reducers/weatherReducer';

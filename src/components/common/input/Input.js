@@ -1,4 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { 
+    useEffect, 
+    useRef 
+} from 'react';
 import { TextInput } from 'react-native';
 import { SEARCH_BUTTON_COLOR } from '../../../constants/colors';
 import { TYPE_CITY_LABEL } from '../../../constants/labels';

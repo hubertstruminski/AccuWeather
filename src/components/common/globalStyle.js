@@ -1,5 +1,4 @@
 import { StyleSheet, Dimensions } from 'react-native';
-import { SEARCH_BUTTON_COLOR } from '../../constants/colors';
 
 export const globalStyles =  StyleSheet.create({
     noHeaderBorder: {
@@ -16,6 +15,11 @@ export const globalStyles =  StyleSheet.create({
     },
 });
 
+const baseWidth = 350;
+const baseHeight = 680;
 
-export const widthScale = Dimensions.get('window').width * 0.0025;
-export const heightScale = Dimensions.get('window').height * 0.00115;
+const deviceWidth = Dimensions.get('window').width;
+const deviceHeight = Dimensions.get('window').height;
+
+export const widthScale = deviceWidth / baseWidth;
+export const heightScale = deviceHeight / baseHeight;

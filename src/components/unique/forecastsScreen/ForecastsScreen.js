@@ -1,10 +1,16 @@
 import React, { useEffect } from 'react';
-import { SafeAreaView, StatusBar, Text } from 'react-native';
+import { 
+    SafeAreaView, 
+    StatusBar 
+} from 'react-native';
 import { globalStyles } from '../../common/globalStyle';
 import styles from './forecastsScreenStyle';
 import { SEARCH_BUTTON_COLOR } from '../../../constants/colors';
 import BackButton from '../../common/button/BackButton';
-import { connect, useSelector } from 'react-redux';
+import { 
+    connect, 
+    useSelector 
+} from 'react-redux';
 import { fetchForecast12Hours } from '../../../store/actions/weatherActions';
 import ForecastsList from './ForecastsList';
 
@@ -13,7 +19,6 @@ const ForecastsScreen = ({ fetchForecast12Hours }) => {
 
     useEffect(() => {
         if(locationKey !== '') {
-            console.log("before");
             fetchForecast12Hours(locationKey);
         }
     }, [locationKey]);
